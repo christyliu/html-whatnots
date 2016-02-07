@@ -1,0 +1,17 @@
+    body { font-family: Helvetica, Arial, sans-serif; }
+    div { width: 800px; height: 400px; margin: 40px auto; padding: 20px;}
+    h1 { font-size: 30px; margin: 0; text-align: center; }
+    p { margin: 40px 0; }
+    em { font-family: monospace; }
+    a { color: #5298fc; text-decoration: none; }
+
+div.a {
+width: 250px;
+height:250px;
+position:fixed;
+    
+}
+
+ #circle{
+ 	border-radius: 50% 50% 50% 50%;
+ }
