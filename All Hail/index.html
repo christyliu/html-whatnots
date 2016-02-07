@@ -6,42 +6,42 @@
 
     <link href="css/style.css" type="text/css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script>$(document).ready(function(){
-    animateDiv();
-    
-});
+        <script>
+        $(document).ready(function(){
+                      animateDiv();
+                      
+        });
 
-function makeNewPosition(){
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 250;
-    var w = $(window).width() - 250;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
+        function makeNewPosition(){
+            
+            // Get viewport dimensions (remove the dimension of the div)
+            var h = $(window).height() - 250;
+            var w = $(window).width() - 250;
+            
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+            
+            return [nh,nw];    
+            
+        }
 
-function animateDiv(){
-    var newq = makeNewPosition();
-    $('.a').animate({ top: newq[0], left: newq[1] }, function(){
-      animateDiv();        
-    });
+        function animateDiv(){
+            var newq = makeNewPosition();
+            $('.a').animate({ top: newq[0], left: newq[1] }, function(){
+              animateDiv();        
+            });
 
-    
-};
-
-
-</script>
-
-
+            
+        };
+      </script>
   </head>
+
+
   <body>
-        <script src="/js/bounce.js"></script>
-    <div class='a'><img src="/img/POL.gif" id="circle"></div>
+      <script src="js/bounce.js"></script>
+    <div class='a'>
+      <img src="img/POL.gif" id="circle">
+    </div>
     <h1>all hail paul</h1>
-    <!--alex i know you're reading this so u better stop-->
   </body>
 </html>
