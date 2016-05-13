@@ -29,12 +29,12 @@ a, a:focus, a:hover, a:visited {
   background-color: #FFFFFF;
   margin: 0px auto;
   padding: 0px;
-  max-width: 400px;
+  max-width: 250px;
 }
 
 .row {
   margin: 2px 0px;
-  padding: 5px;
+  padding: 5px 0px;
   line-height: 50px;
 }
 
@@ -91,7 +91,7 @@ a, a:focus, a:hover, a:visited {
   position: relative;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 5px 65px 5px 15px;
+  padding: 5px;
 }
 
 .logo {
@@ -185,7 +185,7 @@ a, a:focus, a:hover, a:visited {
             };
             $.getJSON(makeURL('channels', channel), function (data) {
                var logo = data.logo != null ? data.logo : 'https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F', name = data.display_name != null ? data.display_name : channel, description = status === 'online' ? '': '';
-               html = '<div class="row ' + status + '"><div class="col-xs-2 col-sm-3" id="icon"><img src="' + logo + '" class="logo"></div><div class="col-xs-10 col-sm-5" id="name"><a href="' + data.url + '" target="_blank">' + name + '</a></div><div class="col-xs-10 col-sm-4" id="streaming">' + game + '<span class="hidden-xs">' + description + '</span></div></div>';
+               html = '<div class="row ' + status + '"><div class="col-xs-2 col-sm-3" id="icon"  style="padding: 0px 5px;"><img src="' + logo + '" class="logo"></div><div class="col-xs-10 col-sm-5" id="name" style="padding: 0px;"><a href="' + data.url + '" target="_blank">' + name + '</a></div><div class="col-xs-10 col-sm-4" id="streaming" style="padding: 0px;">' + game + '<span class="hidden-xs">' + description + '</span></div></div>';
                status === 'online' ? $('#display').prepend(html) : $('#display').append(html);
             });
          });
