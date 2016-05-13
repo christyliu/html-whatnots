@@ -106,7 +106,7 @@ a, a:focus, a:hover, a:visited {
 
 .online {
   background-color: #00AA00;
-  color: #000000;
+  color: #0000FF;
 }
 .online a, .online a:focus, .online a:hover, .online a:visited {
   color: #CCCCCC;
@@ -164,7 +164,7 @@ a, a:focus, a:hover, a:visited {
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
     <script>
-    var channels = ['moomaster33'];
+    var channels = ['moomaster33', 'dreamhackheroes'];
     function getChannelInfo() {
       channels.forEach(function (channel) {
          function makeURL(type, name) {
@@ -180,11 +180,11 @@ a, a:focus, a:hover, a:visited {
                game = 'Account Closed';
                status = 'offline';
             } else {
-               game = data.stream.game;
+               game = 'Online'; //Display name when online
                status = 'online';
             };
             $.getJSON(makeURL('channels', channel), function (data) {
-               var logo = data.logo != null ? data.logo : 'https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F', name = data.display_name != null ? data.display_name : channel, description = status === 'online' ? ': ' + data.status : '';
+               var logo = data.logo != null ? data.logo : 'https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F', name = data.display_name != null ? data.display_name : channel, description = status === 'online' ? '': '';
                html = '<div class="row ' + status + '"><div class="col-xs-2 col-sm-3" id="icon"><img src="' + logo + '" class="logo"></div><div class="col-xs-10 col-sm-5" id="name"><a href="' + data.url + '" target="_blank">' + name + '</a></div><div class="col-xs-10 col-sm-4" id="streaming">' + game + '<span class="hidden-xs">' + description + '</span></div></div>';
                status === 'online' ? $('#display').prepend(html) : $('#display').append(html);
             });
