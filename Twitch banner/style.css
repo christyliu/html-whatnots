@@ -1,6 +1,7 @@
 $background: #FFFFFF; // of page
 $container: #FFFFFF; // lines
 $online: #00AA00;  // name text color when online
+$link: #0000FF;
 $header: #000000;  // used somewhere idk
 $text: #DDDDDD;
 $offline: #CCCCCC; // bg color when offline
@@ -16,7 +17,7 @@ body {
 }
 
 a, a:focus, a:hover, a:visited {
-  color: $online;
+  color: $link;
 }
 
 h1 {
@@ -115,10 +116,7 @@ h1 {
 
 .online {
   background-color: $online;
-  color: $header;
-  a, a:focus, a:hover, a:visited {
-    color: $offline;
-  }
+  color: $text;
 }
 
 #streaming {
